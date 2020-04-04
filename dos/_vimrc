@@ -1,0 +1,26 @@
+set relativenumber
+set autochdir
+set backspace=indent,eol,start
+
+
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'vim-airline/vim-airline'
+Plug 'scrooloose/nerdtree'         
+"Plug 'klen/python-mode'
+Plug 'vim-python/python-syntax'
+Plug 'joshdick/onedark.vim'
+
+call plug#end()
+
+autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python' shellescape(@%, 1)<CR> 
+autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!python' shellscape(@%, 1)<CR>
+
+let g:python_highlight_all = 1
+
+autocmd vimenter * NERDTree
+nmap <F6> :NERDTreeToggle<CR>
+let NERDTreeQuitInOpen=1
+let NERDTreeShowBookmarks=1
+

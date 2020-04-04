@@ -1,0 +1,30 @@
+" Some GUI options
+set guifont=Consolas:h12
+set guioptions -=m 
+set guioptions -=T
+set guioptions -=r
+set guioptions -=L
+
+syntax on
+set number
+
+set tabstop=4
+
+" Effective tab while editing
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+
+set cursorline
+
+filetype indent on
+
+set wildmenu
+
+" Highlight matching brackets [{()}]
+set showmatch
+
+" Plugins
+
+:nnoremap <C-g> :NERDTreeToggle<CR>
+colorscheme onedark
